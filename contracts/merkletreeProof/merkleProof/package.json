@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "ethers": "^5.6.4",
+    "keccak256": "^1.0.6",
+    "merkletreejs": "^0.2.31"
+  },
+  "devDependencies": {
+    "bignumber.js": "^9.0.2"
+  }
+}

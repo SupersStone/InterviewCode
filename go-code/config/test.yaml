@@ -1,0 +1,21 @@
+app_name: dao-exchange
+port: 8080
+
+db:
+  dsn: root:123456@tcp(localhost:3306)/nft_test?timeout=2s&readTimeout=2s&writeTimeout=2s&parseTime=true&loc=Local&charset=utf8mb4
+  max_open_conn: 5
+  log_level: 4
+redis:
+  passwd: xxxx
+  addrs:
+    - cluster-xxx1:6516
+    - cluster-xxx2:6516
+    - cluster-xxx3:6516
+kafka:
+  topic: prd_contract_event_log
+  flush_frequency: 2
+  flush_messages: 6
+  brokers:
+    - common-kafka-1c-1:9092
+    - common-kafka-1d-1:9092
+    - common-kafka-1a-1:9092

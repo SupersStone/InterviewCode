@@ -1,0 +1,19 @@
+version: "3.3"
+services:
+  dao-scanner:
+    container_name: dao-indexer
+    image: dao-indexer
+    working_dir: /root
+    environment:
+      TZ: Asia/Shanghai
+    logging:
+      driver: json-file
+      options:
+        max-size: "20M"
+        max-file: "10"
+    command: ./main --config config.yaml
+    ports:
+      - 18081:8080
+    volumes:
+      - ./config.yaml:/root/config.yaml
+    restart: always
